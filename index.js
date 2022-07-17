@@ -1,6 +1,6 @@
 const pop = () => {
   const stackChildsCount = getStackChildNodes();
-
+console.log("pop",stackChildsCount)
   if (stackChildsCount == 0) {
     //doNothing
   } else {
@@ -9,7 +9,8 @@ const pop = () => {
 };
 const deleteFirstElement = () => {
   const stack = document.getElementById("stack");
-  const stackFirst = stack.firstChild;
+  const stackFirst = stack.firstElementChild;
+  console.log("firstChild",stackFirst)
   stackFirst.remove();
 };
 const push = () => {
@@ -23,7 +24,7 @@ const push = () => {
 };
 const addElementToStack = (value) => {
   const stack = document.getElementById("stack");
-  const stackFirst = stack.firstChild;
+  const stackFirst = stack.firstElementChild;
   const stackElement = getElement(value);
   stack.insertBefore(stackElement, stackFirst);
 };
